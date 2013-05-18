@@ -6,7 +6,7 @@
       <%= link_to edit_context_path(context) do %>
         <i class="icon-pencil"></i>
       <% end %>
-      <%= link_to context_path(context), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) } do %>
+      <%= link_to context_path(context), :method => :delete, :data => { :confirm => t('links.confirm') } do %>
         <i class="icon-remove"></i>
       <% end %>
       <%= context.name %>
