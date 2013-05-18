@@ -1,11 +1,13 @@
 <div class = "row">
-  <div class = "span12">
-    <%= link_to edit_context_path(context) do %>
-      <i class="icon-pencil"></i>
-    <% end %>
-    <%= link_to context_path(context), :method => :delete, :data => { :confirm => t('links.confirm') } do %>
-      <i class="icon-remove"></i>
-    <% end %>
+  <div class = "span12 well">
     <%= context.name %>
+    <div style="float:right">
+      <%= link_to edit_context_path(context) do %>
+        <i class="icon-pencil"></i>
+      <% end %>
+      <%= link_to context, :method => :delete, :data => { :confirm => t('links.confirm') } do %>
+        <i class="icon-remove"></i>
+      <% end %>
+    </div>
   </div>
 </div>
