@@ -1,4 +1,4 @@
-<div class="page-header"><h1><%=t '.title', :default => "Contexts" %></h1></div>
+<div class="page-header"><h1>Contexts</h1></div>
 
 <% @contexts.each do |context| %>
   <div class = "row">
@@ -14,6 +14,8 @@
   </div>
 <% end %>
 
-<%= link_to new_context_path, style: "" do %>
-  <i class="icon-plus" style="font-size: 30px; margin-top: 20px; margin-bottom: 20px;"></i>
+<%= link_to new_context_path, :class => "row" do %>
+  <div class="span12" style="border: 1px dashed #ddd; color: #ddd;">
+    <i class="icon-plus" style="font-size: 30px; margin-top: 10px; margin-bottom: 10px;"> add new context</i>
+  </div>
 <% end %>
