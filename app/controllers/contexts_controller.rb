@@ -1,13 +1,12 @@
 class ContextsController < ApplicationController
+  respond_to :html, :json
+
   # GET /contexts
   # GET /contexts.json
   def index
     @contexts = Context.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @contexts }
-    end
+    respond_with @contexts
   end
 
   # GET /contexts/1
@@ -15,10 +14,7 @@ class ContextsController < ApplicationController
   def show
     @context = Context.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @context }
-    end
+    respond_with @context
   end
 
   # GET /contexts/new
@@ -26,10 +22,7 @@ class ContextsController < ApplicationController
   def new
     @context = Context.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @context }
-    end
+    respond_with @context
   end
 
   # GET /contexts/1/edit
