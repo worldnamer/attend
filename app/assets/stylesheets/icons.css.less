@@ -1,0 +1,15 @@
+.sized (@size: 30px) {
+  font-size: (@size); 
+  margin-top: (@size/3); 
+  margin-bottom: (@size/3); 
+  padding-left: (@size/2);
+}
+
+i.large {
+  .sized(30px);
+}
+
+.faded-button {
+  border: 1px dashed #ddd; 
+  color: #ddd;
+}
