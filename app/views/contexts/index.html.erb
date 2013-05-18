@@ -1,17 +1,7 @@
 <div class="page-header"><h1>Contexts</h1></div>
 
 <% @contexts.each do |context| %>
-  <div class = "row">
-    <div class = "span12">
-      <%= link_to edit_context_path(context) do %>
-        <i class="icon-pencil"></i>
-      <% end %>
-      <%= link_to context_path(context), :method => :delete, :data => { :confirm => t('links.confirm') } do %>
-        <i class="icon-remove"></i>
-      <% end %>
-      <%= context.name %>
-    </div>
-  </div>
+  <%= render partial: "context", locals: {context: context} %>
 <% end %>
 
 <%= link_to new_context_path, :class => "row" do %>
