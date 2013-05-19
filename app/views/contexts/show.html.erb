@@ -1,7 +1,7 @@
 <%- model_class = ::Context -%>
 <ul class="breadcrumb">
   <li><%= link_to t('nav.back'), contexts_path %><span class="divider">/</span></li>
-  <li><%= link_to @context.name, :class => "active" %></li>
+  <li class="active"><%= @context.name %></li>
 </ul>
 
 <h1><%= @context.name %></h1>
