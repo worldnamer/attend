@@ -29,11 +29,6 @@ class ContextsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @context
-    assert_response :success
-  end
-
   test "should update context" do
     put :update, id: @context, context: { name: @context.name }
     assert_redirected_to context_path(assigns(:context))
