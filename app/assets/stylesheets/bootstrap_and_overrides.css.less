@@ -43,3 +43,25 @@
 // Example:
 // @linkColor: #ff0000;
 
+
+h1 input[type="text"] {
+  width: 100%;
+  font-size: @baseFontSize * 2.75;
+  line-height: @baseLineHeight * 2;
+  height: @baseFontSize *2.75;
+
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
+}
+
+h1 span.best_in_place {
+  width: 100%;
+  display: inline-block;
+}
