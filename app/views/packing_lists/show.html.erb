@@ -1,3 +1,13 @@
 <%= breadcrumbs "Contexts" => contexts_path, @context.name => context_path(@context), @packing_list.name => 1 %>
 
 <h1><%= best_in_place [@context, @packing_list], :name %></h1>
+
+<% @packing_list.packables.each do |packable| %>
+  <p><%= packable.name %></p>
+<% end %>
+
+<%= link_to new_context_packing_list_packable_path(@context, @packing_list) do %>
+  <div class="span12 faded-button">
+    <i class="icon-plus large"> add item</i>
+  </div>
+<% end %>

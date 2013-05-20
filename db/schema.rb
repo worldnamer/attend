@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520013850) do
+ActiveRecord::Schema.define(:version => 20130520035046) do
 
   create_table "contexts", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "packables", :force => true do |t|
+    t.string   "name"
+    t.integer  "packing_list_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "packables", ["packing_list_id"], :name => "index_packables_on_packing_list_id"
 
   create_table "packing_lists", :force => true do |t|
     t.string   "name"

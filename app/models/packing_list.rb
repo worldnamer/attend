@@ -1,6 +1,8 @@
 class PackingList < ActiveRecord::Base
   extend ActiveModel::Naming
+
+  belongs_to :context
   
   attr_accessible :name
-  belongs_to :context
+  has_many :packables
 end
