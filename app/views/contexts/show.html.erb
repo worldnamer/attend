@@ -2,6 +2,19 @@
 
 <h1><%= best_in_place @context, :name %></h1>
 
+<% if @context.packing_lists.present? %>
+  <div>
+    <h2>Packing Lists</h2>
+    <% @context.packing_lists.each do |packing_list| %>
+      <div>
+        <%= packing_list.name %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to new_context_packing_list_path(@context) do %>
 <div class="faded-button square-button">
   <i class="icon-plus"></i><br/>add packing list
 </div>
+<% end %>
