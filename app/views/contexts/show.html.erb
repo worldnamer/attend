@@ -7,7 +7,7 @@
     <h2>Packing Lists</h2>
     <% @context.packing_lists.each do |packing_list| %>
       <div>
-        <%= packing_list.name %>
+        <%= link_to packing_list.name, [@context, packing_list] %>
       </div>
     <% end %>
   </div>
